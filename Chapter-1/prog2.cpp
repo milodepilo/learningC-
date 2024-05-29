@@ -17,10 +17,24 @@ int sum(int val1, int val2) {
   return sum;
 }
 
+int sumFor() {
+  int sum = 0;
+  for (int x = 50; x <= 100; ++x) {
+    sum += x;
+  }
+  return sum;
+}
+
 void decrement(int val1, int val2) {
   while (val1 >= val2) {
     print(val1);
     --val1;
+  }
+}
+
+void decrementFor() {
+  for (int x = 10; x >= 0; --x) {
+    print(x);
   }
 }
 
@@ -39,23 +53,15 @@ void printRange(int val1, int val2) {
   }
 }
 
-int main() {
-  print(sum(50, 100));
-  decrement(10, 0);
-  int x, y = 0;
-  cin >> x >> y;
-  printRange(x, y);
+void printSet() {
+  int val, sum = 0;
+  while (cin >> val) {
+    sum += val;
+  }
+  print(sum);
+}
 
-  //
-  //  int number1, number2 = 0;
-  //
-  //  cin >> number1 >> number2;
-  //
-  //  while (number1 == 0 || number2 == 0) {
-  //    print("numbers cannot be zero");
-  //    cin >> number1 >> number2;
-  //  }
-  //
-  //  multiplyInput(number1, number2);
+int main() {
+  printSet();
   return 1;
 }
